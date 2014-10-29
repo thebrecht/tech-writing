@@ -2,10 +2,14 @@
 
 像是開發專案的程式碼，或是資料庫的資料，或是某些經常異動又需要留存的log。為了這些異動而commit container並不合理。
 
-當然，docker設計了volumn的作法，可以把host的資料夾或檔案mount進container之中，這的確是解決了大多時候的需求，但如果考量到開發環境時，希望contanier可以經常抽換組合或重複利用的話，這種mount的方式，好像又有點問題。
+當然，docker設計了volume的作法，可以把host的資料夾或檔案mount進container之中，這的確是解決了大多時候的需求，但如果考量到開發環境時，希望contanier可以經常抽換組合或重複利用的話，這種mount的方式，好像又有點問題。
 
 [Persistent volumes with Docker - Data-only container pattern](http://www.tech-d.net/2013/12/16/persistent-volumes-with-docker-container-as-volume-pattern/) 這篇文章介紹了建立一個container，專作資料儲存之用，可以解決上述的狀況。
 
+### 關鍵概念:
+ - volume-from
 
-### 名詞解釋
-- AUFS
+### 相關資源:
+
+- [Managing Data in Containers](https://docs.docker.com/userguide/dockervolumes/)
+- [aufs不能进入内核的原因](http://leniks.iteye.com/blog/1987200)

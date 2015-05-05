@@ -24,10 +24,18 @@ MongoDB提供高效能的資料保存，特別是:
 replica set是一組MongoDB 伺服器，用來組持相同的資料集，提供資料冗餘並增加資料可用性。
 
 
-
-
 ### 原子式擴展
-src: http://docs.mongodb.org/manual/core/introduction/
+MongoDB核心功能就提供橫向擴展能力
+- 原子式shading將資料分散在叢集機器上
+- Replica sets can provide eventually-consistent reads for low-latency high throughput deployments.
+
+ref: http://docs.mongodb.org/manual/core/introduction/
+
+
+## MongoDB初步
+> mongod& #在背景執行mongo server
+
+> mongo #執行mongo shell
 
 ## Sharding
 [Mongo DB Sharding 心得筆記 (一)](http://leehom59.blogspot.tw/2011/11/mongo-db-sharding.html)

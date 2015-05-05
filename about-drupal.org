@@ -1,0 +1,40 @@
+#+TITLE: Drupal之道
+* Task
+* Resoureces
+[1] The Drupal overview(https://www.drupal.org/getting-started/before/overview)
+[2] General concepts(https://www.drupal.org/node/19828)
+
+* About Drupal
+
+** Drupal 概覽
+
+*** 什麼是Drupal
+   Druapl既是一套內容管理系統(Content Management System, CMS)，可以像論壇、部落格平臺一樣讓使用者輕易地編輯內容，也是一套內容管理框架(Content Management Framework, CMF)，可以讓使用者在它的基礎上，組合或開發出各種內容管理的產品或情境(例如打造出一個社群網站?)。
+
+   不過靈活性的架構是兩面刃，它帶來無限的彈性可以讓使用者、開發者在Drupal之上堆疊各種功能，但也為了應付這樣的彈性，要認識、學習Drupal無疑就有一定的門檻。
+
+   在程式開發上，有個分析概念的手法叫抽象化，例如一台賓士到汔車到交通工具，就是一個抽象化的過程，將細節去除，取得一致的共通性，以便於在相同的概念上去處理。因此，當我們談論到Drupal的基本內容單位叫做node，也就是節點的意思，而不是文章、新聞、部落格、頁面，也就是這的思路。換個名詞來說，用item也是一個抽象化的結果，只是Drupal選擇使用node來表達它的概念。
+
+
+** 未結構章節   
+*** 什麼是Node
+    簡單來說，Node是一組相關內容的組成，例如以新聞來說，除了新聞本體之外，可能還包含了發文時間、作者甚至是使用的tags等。
+    Node是由field組成，像是title filed, body field，另外使用者也可以自訂欄位來組成一個node，在Drupal稱之為node type。
+
+*** Entity Types
+    Entity type是一群filed的組成，它用來儲成和顯示資料，它可以是node，也可以是comment、taxonomy term、user profile等。
+
+**** TODO 解釋Entity和Node的差異 <2015-02-06 五 15:22>
+
+*** 什麼是Module
+*** 什麼是Menu
+*** 什麼是Views
+*** Drupal 流程
+
+ 1. Data: 在系統的基礎是一群node的集合，也就是資料池的概念。在網站能顯示內容之前，必須被輸入為資料。
+ 2. Modules: 第二層是模組層，模組是網站功能的集合。無論是Drupal核心或是外加的功能模組。
+ 3. Blocks & Menus: Blocks通常是模組輸出的資料，並放置於樣版之中。Menus是Drupal的導覽器，它定義了內容的路徑，Menu是Drupal的核心元素。
+ 4. User Permissions: 使用者的權限決定了他能檢視的資料以及可以使用的功能，透過角色的指派，可以定義
+ 5. Template: 最上層是Theme，它決定了網站的外觀，它由html、css、js和php的變數混合而成
+
+src:[1] 

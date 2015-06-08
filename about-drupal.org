@@ -29,6 +29,27 @@
 *** 什麼是Module
 *** 什麼是Menu
 *** 什麼是Views
+*** Views API
+https://api.drupal.org/api/views/views.api.php/group/views_hooks/7
+
+- view hook 發生的進程
+http://www.kdweb.co.uk/blog/drupal-module-views-hook-sequence
+
+
+- 如何取得 view的名稱
+要取得變數名為 $view->name ，要知道目前views 所使用的名稱可以在編輯時，看網址，edit之前的即是 view name，在advance中的 machine name是page name
+
+- views api 如何分辨同一個 view ，不同的page
+$view->current_display 會顯示目前的view page/block name
+
+- hook_views_post_execute
+src: https://api.drupal.org/api/views/views.api.php/function/hook_views_post_execute/7
+
+使用情境:在views render 完成後，去修改rerder 出來的結果。例如如果要統計內文，可以例用這種作法，將內文的field引進views中，透過 hook_views_post_execute 這個hook，計算 body 的字數後，重新塞回 body，就會將內文換成統計字數後的數字並呈現出來。
+
+
+
+
 *** Drupal 流程
 
  1. Data: 在系統的基礎是一群node的集合，也就是資料池的概念。在網站能顯示內容之前，必須被輸入為資料。
